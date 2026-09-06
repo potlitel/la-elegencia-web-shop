@@ -513,141 +513,128 @@ export const COUPONS = {
   LAELEGANCIA10: { percent: 10, code: "LAELEGANCIA10" },
 }
 
-export const REVIEWS_BY_CATEGORY = {
-  vestidos: [
-    {
-      author: "Isabel R.",
-      date: "hace 2 días",
-      rating: 5,
-      text: "El vestido quedó tal cual la foto, la tela cae divino y el largo es perfecto.",
-    },
-    {
-      author: "Marilín D.",
-      date: "hace 4 días",
-      rating: 4,
-      text: "Muy lindo y fresco. Lo usé en una boda y recibí muchos cumplidos.",
-    },
-    {
-      author: "Yamila P.",
-      date: "hace 1 semana",
-      rating: 5,
-      text: "Justo lo que buscaba para el calor: ligero, elegante y se mantiene bien.",
-    },
-    {
-      author: "Odalys F.",
-      date: "hace 2 semanas",
-      rating: 4,
-      text: "El color real es igual que en la foto. Buena confección por el precio.",
-    },
+export const REVIEWS_BY_PRODUCT = {
+  1: [
+    { author: "Dania L.", date: "hace 2 días", rating: 5, text: "El estampado es aún más bonito en persona. Llegó bien empacado y la tela cae divina." },
+    { author: "Mayra T.", date: "hace 4 días", rating: 4, text: "Muy lindo vestido, solo que me quedó un poco largo de talla. La calidad excelente." },
+    { author: "Yordanka R.", date: "hace 1 semana", rating: 5, text: "Lo usé en una boda y recibí cumplidos todo el día. ¡Súper recomendado!" },
+    { author: "Yunieris F.", date: "hace 2 semanas", rating: 5, text: "Tela ligera perfecta para el calor. El color es igualito a la foto." },
   ],
-  blusas: [
-    {
-      author: "Laura M.",
-      date: "hace 3 días",
-      rating: 5,
-      text: "Blusa suave y con muy buen caído. La uso tanto de día como de tarde.",
-    },
-    {
-      author: "Celia B.",
-      date: "hace 5 días",
-      rating: 4,
-      text: "La talla ajustó perfecto. El tejido es fresco y no transparenta.",
-    },
-    {
-      author: "Regla V.",
-      date: "hace 1 semana",
-      rating: 5,
-      text: "Llegó rápido y empacada con cuidado. Me queda ideal para la oficina.",
-    },
-    {
-      author: "Sandra C.",
-      date: "hace 2 semanas",
-      rating: 4,
-      text: "Buen acabado, botones firmes. Repetiré en otro color.",
-    },
+  2: [
+    { author: "Liset V.", date: "hace 1 día", rating: 5, text: "El vestido negro perfecto. Ajusta como guante y la tela no transparenta." },
+    { author: "Geidy P.", date: "hace 3 días", rating: 5, text: "Para una cena formal, es ideal. Elegante sin exagerar." },
+    { author: "Anays C.", date: "hace 1 semana", rating: 4, text: "Muy bonito pero la talla corre un poco pequeña. Pidan una más." },
+    { author: "Osmara G.", date: "hace 2 semanas", rating: 5, text: "Segundo vestido que compro aquí y no me decepciona. Atención de 10." },
   ],
-  pantalones: [
-    {
-      author: "Tania G.",
-      date: "hace 2 días",
-      rating: 5,
-      text: "Ajuste perfecto al cuerpo sin apretar. Se nota la calidad de la tela.",
-    },
-    {
-      author: "Miriam H.",
-      date: "hace 6 días",
-      rating: 4,
-      text: "Cómodos todo el día. Me vinieron un pelín largos de bota.",
-    },
-    {
-      author: "Anabel L.",
-      date: "hace 1 semana",
-      rating: 5,
-      text: "El talle alto me encanta, estilizan muchísimo. Repetiría sin dudas.",
-    },
-    {
-      author: "Danay S.",
-      date: "hace 2 semanas",
-      rating: 4,
-      text: "Buen denim, resistente. La entrega fue rapidísima.",
-    },
+  3: [
+    { author: "Amara G.", date: "hace 2 días", rating: 5, text: "La blusa más cómoda que tengo. El estampado es único y la tela respira." },
+    { author: "Nayka H.", date: "hace 5 días", rating: 4, text: "Bonita y fresca. Los bolsillos son un plus que no esperaba." },
+    { author: "Idania L.", date: "hace 1 semana", rating: 5, text: "La combinación de colores es hermosa. Perfecta para el verano cubano." },
+    { author: "Yuliana S.", date: "hace 2 semanas", rating: 4, text: "Buena calidad por el precio. Llegó rápido y bien empacada." },
   ],
-  faldas: [
-    {
-      author: "Vivian T.",
-      date: "hace 3 días",
-      rating: 5,
-      text: "Combina con todo lo que tenía en el clóset. Muy bien confeccionada.",
-    },
-    {
-      author: "Clara N.",
-      date: "hace 5 días",
-      rating: 4,
-      text: "Lindo corte y buena caída. El plisado se mantiene perfecto.",
-    },
-    {
-      author: "Nuria R.",
-      date: "hace 1 semana",
-      rating: 5,
-      text: "Del trabajo a la cena sin cambiar de look. Tal cual lo esperaba.",
-    },
-    {
-      author: "América P.",
-      date: "hace 2 semanas",
-      rating: 4,
-      text: "Cintura cómoda y tela de calidad. Llega muy bien empacada.",
-    },
+  4: [
+    { author: "Oslaidys R.", date: "hace 2 días", rating: 5, text: "La tela es espectacular. Se siente muy cara para el precio." },
+    { author: "Damaris B.", date: "hace 4 días", rating: 5, text: "Perfecta para la oficina. El acabado brillante da un toque elegante." },
+    { author: "Yenia T.", date: "hace 1 semana", rating: 4, text: "Muy bonita solo que se arruga fácil. Aparte, impecable." },
+    { author: "Yorel F.", date: "hace 2 semanas", rating: 5, text: "La mejor compra que he hecho. Tela suave y caída perfecta." },
   ],
-  accesorios: [
-    {
-      author: "Dayana F.",
-      date: "hace 2 días",
-      rating: 5,
-      text: "Se ve mucho más caro de lo que pagué. Terminación excelente.",
-    },
-    {
-      author: "Yenisei C.",
-      date: "hace 4 días",
-      rating: 4,
-      text: "Justo como en las fotos, bonito y sin detalles. Muy conforme.",
-    },
-    {
-      author: "Georgina A.",
-      date: "hace 1 semana",
-      rating: 5,
-      text: "El detalle perfecto para elevar cualquier outfit. Lo recomiendo.",
-    },
-    {
-      author: "Liset B.",
-      date: "hace 2 semanas",
-      rating: 4,
-      text: "Precioso y funcional. El envío llegó antes de lo previsto.",
-    },
+  5: [
+    { author: "Leidys M.", date: "hace 1 día", rating: 5, text: "El mom jean que buscaba. Cómodo, alto y con el estilo retro perfecto." },
+    { author: "Yanet D.", date: "hace 5 días", rating: 4, text: "Denim resistente pero flexible. Me encanta el talle alto." },
+    { author: "Yaritza L.", date: "hace 1 semana", rating: 5, text: "Lo combino con todo. De las mejores prendas de mi clóset." },
+    { author: "Marialegna P.", date: "hace 2 semanas", rating: 4, text: "Buena calidad, el único detalle es que se arruga un poco después de lavar." },
+  ],
+  6: [
+    { author: "Nairobis G.", date: "hace 2 días", rating: 5, text: "Fresquísimo para el calor. El elástico de la cintura es súper cómodo." },
+    { author: "Yarelys H.", date: "hace 4 días", rating: 4, text: "Hermoso pantalón, fluye con cada paso. Muy femenino." },
+    { author: "Ilia C.", date: "hace 1 semana", rating: 5, text: "Lo pedí en verde y el color es preciso. Tela ligera de primera." },
+    { author: "Yuliet K.", date: "hace 2 semanas", rating: 4, text: "Me gusta mucho, solo que necesité un tiempo para estrenarlo bien." },
+  ],
+  7: [
+    { author: "Yakelin A.", date: "hace 2 días", rating: 5, text: "De mi trabajo a una cena sin cambiarme. Versátil y elegante." },
+    { author: "Daysiannys R.", date: "hace 3 días", rating: 5, text: "El plisado se mantiene perfecto después de lavar. Excelente." },
+    { author: "Lianna T.", date: "hace 1 semana", rating: 4, text: "Bonita falda, el color rosa palo es muy delicado." },
+    { author: "Yoandra S.", date: "hace 2 semanas", rating: 5, text: "La talla ajustó perfecto. Muy conforme con la compra." },
+  ],
+  8: [
+    { author: "Celina V.", date: "hace 1 día", rating: 4, text: "Falda resistente y con buen corte. El denim es de calidad." },
+    { author: "Yosleny M.", date: "hace 5 días", rating: 5, text: "Un básico que no puede faltar. La uso con tenis o con tacones." },
+    { author: "Yaneisi F.", date: "hace 1 semana", rating: 4, text: "Bien confeccionada. El largo es perfecto para mi estatura." },
+    { author: "Raquel B.", date: "hace 2 semanas", rating: 5, text: "Segunda que compro en otro color. Me encanta." },
+  ],
+  9: [
+    { author: "Yulieska D.", date: "hace 2 días", rating: 5, text: "Elegante y perfecto para cualquier ocasión. El cierre oro es un plus." },
+    { author: "Giselle L.", date: "hace 4 días", rating: 5, text: "Lo regalé a mi mamá y quedó encantada. Empaque de primera." },
+    { author: "Laritza H.", date: "hace 1 semana", rating: 4, text: "Bonitas perlas, el largo es ideal. Buena relación calidad-precio." },
+    { author: "Yarima P.", date: "hace 2 semanas", rating: 5, text: "Un clásico que nunca falla. Queda perfecto con todo." },
+  ],
+  10: [
+    { author: "Graciela T.", date: "hace 1 día", rating: 5, text: "Espacioso y muy bien terminado. Los asas aguantan peso sin problema." },
+    { author: "Yusimi C.", date: "hace 3 días", rating: 5, text: "El mejor bolso tote que he tenido. Cuero sintético de primera." },
+    { author: "Betsy R.", date: "hace 1 semana", rating: 4, text: "Bonito y funcional. El bolsillo interno es muy práctico." },
+    { author: "Niurka G.", date: "hace 2 semanas", rating: 5, text: "Lo uso a diario y se mantiene como nuevo. Totalmente recomendado." },
+  ],
+  11: [
+    { author: "Yanelis S.", date: "hace 2 días", rating: 5, text: "El color es espectacular. Lleno de energía y perfecto para fiestas." },
+    { author: "Yudelkis M.", date: "hace 4 días", rating: 4, text: "Muy llamativo y bonito. La tela es suave y fresca." },
+    { author: "Dayana L.", date: "hace 1 semana", rating: 5, text: "Fui la más brillante de la fiesta. Todos preguntaron dónde lo compré." },
+    { author: "Annel F.", date: "hace 2 semanas", rating: 4, text: "Bonito vestido, el color es igual a la foto. Buena compra." },
+  ],
+  12: [
+    { author: "Odalys V.", date: "hace 1 día", rating: 5, text: "Original y con personalidad. El lazo al hombro es un detalle único." },
+    { author: "Yenifer H.", date: "hace 5 días", rating: 4, text: "Moderna y diferente. Perfecta para salir con amigas." },
+    { author: "Lisneidy G.", date: "hace 1 semana", rating: 5, text: "Me encanta el corte asimétrico. Se ve muy chic." },
+    { author: "Yusnaydi T.", date: "hace 2 semanas", rating: 4, text: "Buena tela y corte. Solo que el lazo se desata fácil." },
+  ],
+  13: [
+    { author: "Yaily R.", date: "hace 1 día", rating: 5, text: "El vestido de verano perfecto. Fresco, ligero y el turquesa es precioso." },
+    { author: "Milena C.", date: "hace 3 días", rating: 5, text: "Lo usé en la playa y fue el favorito. Caída fluida hermosa." },
+    { author: "Yosimara P.", date: "hace 1 semana", rating: 4, text: "Muy bonito, la tela es fresca. Ideal para el calor cubano." },
+    { author: "Kenia L.", date: "hace 2 semanas", rating: 5, text: "Segundo vestido que compro aquí y superó mis expectativas." },
+  ],
+  14: [
+    { author: "Yaneisy B.", date: "hace 2 días", rating: 5, text: "El lino natural es perfecto para el clima. Transpirable y elegante." },
+    { author: "Rosmery T.", date: "hace 4 días", rating: 4, text: "Bonita blusa, los botones frontales le dan un toque especial." },
+    { author: "Yudelmis F.", date: "hace 1 semana", rating: 5, text: "La uso constantemente. Lino suave de buena calidad." },
+    { author: "Maily S.", date: "hace 2 semanas", rating: 4, text: "Muy buena compra. El color crema combina con todo." },
+  ],
+  15: [
+    { author: "Yainet H.", date: "hace 1 día", rating: 5, text: "Ajuste moderno y cómodo. El denim tiene buena elasticidad." },
+    { author: "Yaritza G.", date: "hace 3 días", rating: 4, text: "Estiliza mucho la figura. El talle medio queda perfecto." },
+    { author: "Dailyn G.", date: "hace 1 semana", rating: 5, text: "Denim de calidad, no se deforma después de lavar." },
+    { author: "Yarelys V.", date: "hace 2 semanas", rating: 4, text: "Me gusta el corte slim, es mi estilo favorito ahora." },
+  ],
+  16: [
+    { author: "Yamilka R.", date: "hace 2 días", rating: 5, text: "Compacta pero cabe de todo. La correa ajustable es muy práctica." },
+    { author: "Lianet T.", date: "hace 5 días", rating: 5, text: "Piel sintética de primera. Se ve mucho más cara de lo que es." },
+    { author: "Yennefer L.", date: "hace 1 semana", rating: 4, text: "Bonita y funcional. El cierre de seguridad da tranquilidad." },
+    { author: "Yanet C.", date: "hace 2 semanas", rating: 5, text: "La mejor bandolera que he tenido. Diseño elegante y resistente." },
+  ],
+  17: [
+    { author: "Greysis P.", date: "hace 1 día", rating: 5, text: "Elegante y preciso. La esfera minimalista es un detalle sofisticado." },
+    { author: "Yoenis D.", date: "hace 4 días", rating: 5, text: "Lo uso diario y combina con todo. Caja metálica resistente." },
+    { author: "Daysi F.", date: "hace 1 semana", rating: 4, text: "Bonito reloj, el peso es ideal. No se siente pesado en la muñeca." },
+    { author: "Yordanka H.", date: "hace 2 semanas", rating: 5, text: "Regalo perfecto. Mi amiga quedó encantada con él." },
+  ],
+  18: [
+    { author: "Yilianis S.", date: "hace 1 día", rating: 4, text: "El básico que necesitaba. Algodón suave y tiro al cuerpo perfecto." },
+    { author: "Yoanka M.", date: "hace 3 días", rating: 5, text: "Camiseta perfecta. Ni transparenta ni aprieta. De lo mejor." },
+    { author: "Milagros R.", date: "hace 1 semana", rating: 4, text: "Buena calidad por el precio. La uso sola o debajo de otras prendas." },
+    { author: "Yudith T.", date: "hace 2 semanas", rating: 5, text: "Compré varias en distintos colores. Calidad consistente." },
+  ],
+  19: [
+    { author: "Yarlenis G.", date: "hace 2 días", rating: 5, text: "Elegante para celebraciones. El tono mentol es precioso y refrescante." },
+    { author: "Yomara L.", date: "hace 4 días", rating: 4, text: "Muy bonito, la tela fluye con movimiento. Ideal para eventos." },
+    { author: "Yeida C.", date: "hace 1 semana", rating: 5, text: "Lo usé en un cumpleaños y fue perfecto. Cómodo y llamativo." },
+    { author: "Yankayla F.", date: "hace 2 semanas", rating: 4, text: "Detalles fluidos hermosos. Solo que talla corre un poco." },
+  ],
+  20: [
+    { author: "Yuleidys V.", date: "hace 1 día", rating: 5, text: "Color vibrante y corte moderno. Perfecta para el verano." },
+    { author: "Yosneidis P.", date: "hace 5 días", rating: 4, text: "Naranja cálido que ilumina la cara. Me encanta." },
+    { author: "Yaile B.", date: "hace 1 semana", rating: 5, text: "Tela fresca y color llamativo. La mejor compra del mes." },
+    { author: "Yenit H.", date: "hace 2 semanas", rating: 4, text: "Bonita y cómoda. El corte moderno le da personalidad." },
   ],
 }
-
-// Reseñas por defecto si faltara la categoría.
-export const REVIEW_SEEDS = REVIEWS_BY_CATEGORY.vestidos
 
 export const TAX_RATE = 0.1
 export const STORE_PHONE = "5355123456"
