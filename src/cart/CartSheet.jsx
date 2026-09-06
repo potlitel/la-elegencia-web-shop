@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Minus, Plus, Trash2, ArrowRight, TicketPercent, X } from "lucide-react"
 import { useStore } from "../core/StoreContext"
 import { formatCUP } from "../core/money.js"
+import { getProductById, productImage } from "../data/shop.js"
 import { toast } from "sonner"
 import PaymentLogos from "../payments/PaymentLogos.jsx"
 
@@ -21,10 +22,14 @@ function ColorSwatch({ hex }) {
 
 function CartLine({ line }) {
   const { updateQty, removeFromCart } = useStore()
+  const product = getProductById(line.productId)
+  const img = product
+    ? productImage(product, line.colorHex)
+    : line.image
   return (
     <div className="flex gap-3 rounded-xl border border-stone-100 bg-white p-3">
       <img
-        src={line.image}
+        src={img}
         alt={line.name}
         className="h-22 w-16 shrink-0 rounded-lg object-cover"
         loading="lazy"

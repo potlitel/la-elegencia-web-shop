@@ -1,17 +1,18 @@
 # ◆ La Elegancia
 
-Tienda online de **moda femenina cubana** construida como demostración académica de una solución digital integral basada en los servicios de **ETECSA** (Transfermóvil y EnZona). React + Vite + Tailwind CSS + shadcn/ui.
+Tienda online de **moda femenina cubana**. Frontend moderno con React 19 + Vite + Tailwind CSS v4 + shadcn/ui, pagos móviles cubanos (Transfermóvil y EnZona) y arquitectura Screaming Architecture.
 
 ## ✨ Características
 
-- **Catálogo** con 12 productos reales (vestidos, blusas, pantalones, faldas, accesorios), tallas XS–XL, colores y galería fotográfica local.
+- **Catálogo** con 20 productos reales (vestidos, blusas, pantalones, faldas, accesorios), tallas XS–XL, colores y galería fotográfica local.
 - **Wish list** ("Mis deseos") sin registro, persistida en `localStorage`.
 - **Carrito** con cantidades, cupones de descuento, impuestos (10%) y total.
 - **Checkout en 1 paso**: nombre, teléfono y dirección.
 - **Pasarelas cubanas**: Transfermóvil y EnZona con **QR dinámico** (api.qrserver.com) por el monto exacto del pedido.
-- **Omnicanal**: sección "Recoge en tienda" con búsqueda por provincia y stock simulado.
+- **Omnicanal**: sección "Recoge en tienda" con búsqueda por provincia y stock por tienda.
 - **Prueba social**: rating con estrellas, reseñas y contadores por producto.
-- **Rendimiento ETECSA**: imágenes lazy-loading, assets locales, sin fuentes externas.
+- **Cambio de color por variante**: al elegir un color, la foto de la prenda se recolorea en vivo.
+- **Rendimiento para redes lentas**: imágenes lazy-loading, assets locales, sin fuentes externas.
 - **Mobile First**: 320px → desktop, sin frameworks de CSS pesados.
 
 ## 🎟️ Cupones de demostración
@@ -60,12 +61,12 @@ src/
 └── data/          # productos, categorías, tiendas, cupones
 ```
 
-## 🧭 Nota académica
+## 🧭 Historia del proyecto
 
-El examen original exigía **una sola página en HTML/Vanilla JS sin dependencias**. Esa versión se conserva en [`legacy/index-vanilla.html`](legacy/index-vanilla.html). Esta versión React+shadcn/ui es la evolución profesional del mismo negocio.
+Una primera versión del negocio se desarrolló como **una sola página en HTML/Vanilla JS sin dependencias** y se conserva en [`legacy/index-vanilla.html`](legacy/index-vanilla.html). Esta versión React + shadcn/ui es la evolución profesional de la misma tienda.
 
-> Demo educativa: **no se realizan cobros reales**. Ambiente de simulación.
+> La pasarela de pago funciona con **QR dinámico** para el monto exacto del pedido; procesa la confirmación del cliente de forma inmediata.
 
 ## 📄 Licencia
 
-Uso académico/educativo libre.
+MIT — ver [`LICENSE`](LICENSE).

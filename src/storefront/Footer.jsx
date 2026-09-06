@@ -103,8 +103,8 @@ export default function Footer() {
 
       <div className="border-t border-stone-800">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-stone-500 sm:flex-row sm:px-6 lg:px-8">
-          <p>© 2026 La Elegancia · Demostración académica ETECSA</p>
-          <p>Servicios de pago de ETECSA · Transfermóvil &amp; EnZona</p>
+          <p>© 2026 La Elegancia · Todos los derechos reservados</p>
+          <p>Servicios de pago · Transfermóvil &amp; EnZona</p>
         </div>
       </div>
     </footer>

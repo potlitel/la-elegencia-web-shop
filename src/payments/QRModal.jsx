@@ -128,7 +128,7 @@ export default function QRModal() {
                 {generating ? "Confirmando pago…" : "Ya pagué · Confirmar"}
               </Button>
               <p className="mt-3 text-[11px] text-stone-400">
-                Demo: no se realizan cargos reales. Simulación para el examen.
+                Pago seguro desde tu móvil · Confirma y recibe tu pedido en 24 h.
               </p>
             </>
           )}

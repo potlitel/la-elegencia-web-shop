@@ -15,7 +15,7 @@ export const PAYMENT_METHODS = {
     name: "EnZona",
     short: "EZ",
     color: "#e31837",
-    description: "Billetera digital de ETECSA.",
+    description: "Billetera digital oficial de Cuba.",
   },
 }
 

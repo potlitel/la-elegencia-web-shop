@@ -1,5 +1,10 @@
 import { CATEGORIES } from "../data/shop.js"
 
+function scrollToCatalog(e) {
+  e.preventDefault()
+  document.getElementById("catalog")?.scrollIntoView({ behavior: "smooth" })
+}
+
 // SCREAMING ARCHITECTURE: STOREFRONT MODULE — category navigation
 export default function NavBar() {
   return (
@@ -7,6 +12,7 @@ export default function NavBar() {
       <div className="no-scrollbar mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-2 sm:px-6 lg:px-8">
         <a
           href="#catalog"
+          onClick={scrollToCatalog}
           className="shrink-0 rounded-full bg-stone-900 px-4 py-1.5 text-sm font-medium text-white"
         >
           ✨ Todo
@@ -16,10 +22,7 @@ export default function NavBar() {
             key={c.id}
             href={`#catalog`}
             className="shrink-0 rounded-full border border-stone-200 bg-white px-4 py-1.5 text-sm font-medium text-stone-600 transition-colors hover:border-stone-900 hover:text-stone-900"
-            onClick={(e) => {
-              e.preventDefault()
-              document.getElementById("catalog")?.scrollIntoView({ behavior: "smooth" })
-            }}
+            onClick={scrollToCatalog}
           >
             <span className="mr-1">{c.icon}</span>
             {c.label}

@@ -7,12 +7,14 @@ import { useStore } from "../core/StoreContext"
 import LazyImage from "../core/media.jsx"
 import Rating from "../core/Rating.jsx"
 import { formatCUP } from "../core/money.js"
+import { productImage } from "../data/shop.js"
 
 // SCREAMING ARCHITECTURE: CATALOG MODULE — product card
 export default function ProductCard({ product }) {
   const { addToCart, toggleWishlist, wishlist, setDetailProductId } = useStore()
   const [size, setSize] = useState(product.sizes[1] ?? product.sizes[0])
   const [color, setColor] = useState(product.colors[0])
+  const img = productImage(product, color.hex)
   const wished = wishlist.includes(product.id)
   const discount = product.oldPrice
     ? Math.round((1 - product.price / product.oldPrice) * 100)
@@ -23,7 +25,7 @@ export default function ProductCard({ product }) {
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-stone-200/70 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Imagen + badges */}
       <div className="relative" onClick={() => setDetailProductId(product.id)} role="button" aria-label={`Ver detalle de ${product.name}`}>
-        <LazyImage src={product.image} alt={product.name} className="w-full cursor-pointer" />
+        <LazyImage key={img} src={img} alt={`${product.name} - color ${color.name}`} className="w-full cursor-pointer" />
         <div className="absolute left-3 top-3 flex flex-col gap-1.5">
           {product.isNew && (
             <Badge className="bg-emerald-500 text-white shadow-sm hover:bg-emerald-500">Nuevo</Badge>
@@ -98,6 +100,7 @@ export default function ProductCard({ product }) {
           ))}
         </div>
         <div className="mt-2 flex items-center gap-1.5">
+          <span className="mr-0.5 text-[11px] font-semibold text-stone-500">Color:</span>
           {product.colors.map((c) => (
             <button
               key={c.name}
@@ -111,11 +114,12 @@ export default function ProductCard({ product }) {
               aria-label={`Color ${c.name}`}
             />
           ))}
+          <span className="ml-auto text-[11px] text-stone-400">{color.name}</span>
         </div>
 
         <div className="mt-4 flex-1" />
         <Button
-          onClick={() => addToCart(product, size, color)}
+          onClick={() => addToCart(product, size, color.hex)}
           className="w-full bg-orange-500 text-white shadow-sm hover:bg-orange-600"
         >
           <ShoppingBag className="mr-2 h-4 w-4" />

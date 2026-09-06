@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 
-// SCREAMING ARCHITECTURE: LAZY LOADING MODULE (ETECSA optimization)
+// SCREAMING ARCHITECTURE: LAZY LOADING MODULE (redes lentas)
 // Carga la imagen real solo cuando el elemento se acerca al viewport.
 export default function LazyImage({ src, alt, className, ratio = "aspect-[4/5]" }) {
   const [loaded, setLoaded] = useState(false)

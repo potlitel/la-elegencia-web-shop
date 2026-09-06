@@ -9,17 +9,19 @@ import { useStore } from "../core/StoreContext"
 import LazyImage from "../core/media.jsx"
 import Rating from "../core/Rating.jsx"
 import { formatCUP } from "../core/money.js"
-import { REVIEW_SEEDS } from "../data/shop.js"
+import { REVIEWS_BY_CATEGORY, REVIEW_SEEDS } from "../data/shop.js"
+import { productImage } from "../data/shop.js"
 import { toast } from "sonner"
 
 // SCREAMING ARCHITECTURE: CATALOG MODULE — product detail dialog
 export default function ProductDetailDialog({ product }) {
   const { setDetailProductId, addToCart, toggleWishlist, wishlist } = useStore()
-  const [size, setSize] = useState(product.sizes[1] ?? product.sizes[0])
-  const [color, setColor] = useState(product.colors[0])
+  const [size, setSize] = useState(product?.sizes[1] ?? product?.sizes[0] ?? "")
+  const [color, setColor] = useState(product?.colors[0] ?? null)
+  const img = color ? productImage(product, color.hex) : ""
+  const wished = wishlist.includes(product?.id)
 
-  if (!product) return null
-  const wished = wishlist.includes(product.id)
+  if (!product || !color) return null
   const urgent = product.stock <= 3
 
   return (
@@ -29,8 +31,9 @@ export default function ProductDetailDialog({ product }) {
           {/* Imagen */}
           <div className="relative">
             <LazyImage
-              src={product.image}
-              alt={product.name}
+              key={img}
+              src={img}
+              alt={`${product.name} - color ${color.name}`}
               ratio="aspect-[4/5] sm:h-[520px]" 
               className="sm:rounded-l-lg"
             />
@@ -172,7 +175,7 @@ export default function ProductDetailDialog({ product }) {
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {REVIEW_SEEDS.map((r, i) => (
+            {(REVIEWS_BY_CATEGORY[product.category] ?? REVIEW_SEEDS).map((r, i) => (
               <div key={i} className="rounded-xl border border-stone-100 p-3">
                 <div className="mb-1.5 flex items-center gap-2">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-stone-900 text-[11px] font-bold text-white">

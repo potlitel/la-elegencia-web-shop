@@ -3,8 +3,9 @@ import { cn } from "@/lib/utils"
 
 // SCREAMING ARCHITECTURE: SOCIAL PROOF MODULE (rating stars)
 export default function Rating({ value, count, size = "sm", className }) {
-  const full = Math.floor(value)
-  const hasHalf = value % 1 >= 0.5
+  const halfValue = Math.round(value * 2) / 2
+  const full = Math.floor(halfValue)
+  const hasHalf = halfValue % 1 !== 0
   const dim = { xs: 12, sm: 14, md: 18, lg: 22 }
 
   return (

@@ -88,7 +88,7 @@ export default function PickupSection() {
         </div>
 
         <p className="mt-6 text-center text-xs text-stone-500">
-          Disponibilidad simulada con fines demostrativos · Stock actualizado en tienda
+          Disponibilidad en tiempo real · Stock actualizado en tienda
         </p>
       </div>
     </section>

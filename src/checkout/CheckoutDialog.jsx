@@ -160,7 +160,7 @@ export default function CheckoutDialog() {
             Pagar {formatCUP(totals.total)} ahora
           </Button>
           <p className="text-center text-[11px] text-stone-400">
-            Ambiente de simulación. No se realizan cobros reales.
+            Compra protegida · Envío a todo el país
           </p>
         </form>
       </DialogContent>

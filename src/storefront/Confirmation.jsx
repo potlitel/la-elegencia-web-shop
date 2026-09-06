@@ -12,7 +12,9 @@ export default function Confirmation() {
   const order = lastOrder ?? { orderId: "PED-00000000", count: 0, subtotal: 0, tax: 0, total: 0, discount: 0 }
 
   const copyOrder = () => {
-    navigator.clipboard?.writeText(order.orderId).then(() => {
+    const write = navigator.clipboard?.writeText(order.orderId)
+    if (!write) return
+    write.then(() => {
       setCopied(true)
       toast.success("N° de pedido copiado")
       setTimeout(() => setCopied(false), 2000)

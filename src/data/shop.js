@@ -161,8 +161,9 @@ export const PRODUCTS = [
     oldPrice: null,
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Azul", hex: "#1e90ff" },
-      { name: "Azul oscuro", hex: "#0000cd" },
+      { name: "Azul denim", hex: "#35639d" },
+      { name: "Azul lavado", hex: "#a3c4f3" },
+      { name: "Negro", hex: "#1c1917" },
     ],
     rating: 4.3,
     reviews: 55,
@@ -260,6 +261,182 @@ export const PRODUCTS = [
       "Blusa de corte asimétrico con lazo al hombro. Moderna, original y con personalidad.",
     tags: ["moderno", "fiesta"],
   },
+  {
+    id: 13,
+    slug: "vestido-turquesa",
+    name: "Vestido Turquesa Tropical",
+    category: "vestidos",
+    price: 2750,
+    oldPrice: null,
+    sizes: ["XS", "S", "M", "L"],
+    colors: [
+      { name: "Turquesa", hex: "#2dd4bf" },
+      { name: "Rosa", hex: "#f9a8d4" },
+      { name: "Celeste", hex: "#a3c4f3" },
+    ],
+    rating: 4.7,
+    reviews: 63,
+    stock: 9,
+    isNew: true,
+    image: "/images/vestido-turquesa.jpg",
+    description:
+      "Vestido fresco en turquesa vibrante, con caída fluida y vuelo ligero. El favorito de la temporada para el calor y la playa.",
+    tags: ["verano", "playa", "nuevo"],
+  },
+  {
+    id: 14,
+    slug: "blusa-crema",
+    name: "Blusa Lino Crema",
+    category: "blusas",
+    price: 1450,
+    oldPrice: 1700,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: [
+      { name: "Crema", hex: "#f0e6d2" },
+      { name: "Rosa palo", hex: "#ffd6e0" },
+      { name: "Celeste", hex: "#a3c4f3" },
+    ],
+    rating: 4.6,
+    reviews: 51,
+    stock: 16,
+    isNew: true,
+    image: "/images/blusa-crema.jpg",
+    description:
+      "Blusa de lino natural con botones frontales y corte holgado. Transpirable y elegante para cualquier plan del día.",
+    tags: ["lino", "verano", "nuevo"],
+  },
+  {
+    id: 15,
+    slug: "pantalon-denim-slim",
+    name: "Pantalón Denim Slim",
+    category: "pantalones",
+    price: 2350,
+    oldPrice: null,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: [
+      { name: "Denim", hex: "#4f6d9f" },
+      { name: "Celeste", hex: "#a3c4f3" },
+      { name: "Crudo", hex: "#f5f0e1" },
+    ],
+    rating: 4.4,
+    reviews: 88,
+    stock: 11,
+    isNew: false,
+    image: "/images/pantalon-denim-slim.jpg",
+    description:
+      "Pantalón denim slim de talle medio con elasticidad. Ajuste moderno que estiliza la figura sin sacrificar comodidad.",
+    tags: ["denim", "casual"],
+  },
+  {
+    id: 16,
+    slug: "bolso-bandolera",
+    name: "Bolso Bandolera Piel",
+    category: "accesorios",
+    price: 3200,
+    oldPrice: 3800,
+    sizes: ["Única"],
+    colors: [
+      { name: "Marrón", hex: "#8b4513" },
+      { name: "Caramelo", hex: "#d2691e" },
+      { name: "Negro", hex: "#1c1917" },
+    ],
+    rating: 4.8,
+    reviews: 142,
+    stock: 6,
+    isNew: true,
+    image: "/images/bolso-bandolera.jpg",
+    description:
+      "Bandolera de piel sintética con correa ajustable y cierre de seguridad. Compacta por fuera, amplia por dentro.",
+    tags: ["bolsos", "cuero", "nuevo"],
+  },
+  {
+    id: 17,
+    slug: "reloj-elegante",
+    name: "Reloj Elegante Dama",
+    category: "accesorios",
+    price: 2400,
+    oldPrice: null,
+    sizes: ["Única"],
+    colors: [
+      { name: "Negro", hex: "#1c1917" },
+      { name: "Oro", hex: "#d4af37" },
+      { name: "Plata", hex: "#c0c0c0" },
+    ],
+    rating: 4.9,
+    reviews: 96,
+    stock: 13,
+    isNew: true,
+    image: "/images/reloj-elegante.jpg",
+    description:
+      "Reloj de pulsera con esfera minimalista y caja metálica. El detalle que completa un look profesional o de noche.",
+    tags: ["relojes", "premium", "nuevo"],
+  },
+  {
+    id: 18,
+    slug: "camiseta-blanca",
+    name: "Camiseta Blanca Básica",
+    category: "blusas",
+    price: 900,
+    oldPrice: null,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: [
+      { name: "Blanco", hex: "#ffffff" },
+      { name: "Negro", hex: "#1c1917" },
+      { name: "Gris", hex: "#a8a29e" },
+    ],
+    rating: 4.5,
+    reviews: 210,
+    stock: 25,
+    isNew: false,
+    image: "/images/camiseta-blanca.jpg",
+    description:
+      "Camiseta básica de algodón peinado, cuello redondo y tiro al cuerpo. El comodín de todos los outfits.",
+    tags: ["básico", "algodón"],
+  },
+  {
+    id: 19,
+    slug: "vestido-mentol",
+    name: "Vestido Mentol Cóctel",
+    category: "vestidos",
+    price: 2600,
+    oldPrice: 2950,
+    sizes: ["S", "M", "L"],
+    colors: [
+      { name: "Mentol", hex: "#7dd3c0" },
+      { name: "Verde", hex: "#16a34a" },
+      { name: "Azul", hex: "#3b82f6" },
+    ],
+    rating: 4.6,
+    reviews: 47,
+    stock: 8,
+    isNew: false,
+    image: "/images/vestido-mentol.jpg",
+    description:
+      "Vestido de cóctel en tono mentol con detalles fluidos. Elegante para celebraciones de tarde y noche.",
+    tags: ["fiesta", "elegante"],
+  },
+  {
+    id: 20,
+    slug: "blusa-naranja",
+    name: "Blusa Naranja Cálida",
+    category: "blusas",
+    price: 1250,
+    oldPrice: null,
+    sizes: ["XS", "S", "M"],
+    colors: [
+      { name: "Naranja", hex: "#f97316" },
+      { name: "Teja", hex: "#b45309" },
+      { name: "Melón", hex: "#fbc490" },
+    ],
+    rating: 4.4,
+    reviews: 29,
+    stock: 14,
+    isNew: false,
+    image: "/images/blusa-naranja.jpg",
+    description:
+      "Blusa en naranja cálido con corte moderno. Color y actitud para destacar en cualquier ocasión.",
+    tags: ["colorido", "verano"],
+  },
 ]
 
 export const CATEGORIES = [
@@ -336,34 +513,154 @@ export const COUPONS = {
   LAELEGANCIA10: { percent: 10, code: "LAELEGANCIA10" },
 }
 
-export const REVIEW_SEEDS = [
-  {
-    author: "María G.",
-    date: "hace 2 días",
-    rating: 5,
-    text: "Excelente calidad, llegó tal cual la foto. Muy recomendado.",
-  },
-  {
-    author: "Yanet R.",
-    date: "hace 5 días",
-    rating: 4,
-    text: "Me encantó, la tela es suave. Solo tardó un poco el envío.",
-  },
-  {
-    author: "Carmen L.",
-    date: "hace 1 semana",
-    rating: 5,
-    text: "Compré dos tallas y ajustó perfecto. Atención de 10.",
-  },
-  {
-    author: "Lili T.",
-    date: "hace 2 semanas",
-    rating: 4,
-    text: "Buen precio para la calidad. Repetiré sin dudas.",
-  },
-]
+export const REVIEWS_BY_CATEGORY = {
+  vestidos: [
+    {
+      author: "Isabel R.",
+      date: "hace 2 días",
+      rating: 5,
+      text: "El vestido quedó tal cual la foto, la tela cae divino y el largo es perfecto.",
+    },
+    {
+      author: "Marilín D.",
+      date: "hace 4 días",
+      rating: 4,
+      text: "Muy lindo y fresco. Lo usé en una boda y recibí muchos cumplidos.",
+    },
+    {
+      author: "Yamila P.",
+      date: "hace 1 semana",
+      rating: 5,
+      text: "Justo lo que buscaba para el calor: ligero, elegante y se mantiene bien.",
+    },
+    {
+      author: "Odalys F.",
+      date: "hace 2 semanas",
+      rating: 4,
+      text: "El color real es igual que en la foto. Buena confección por el precio.",
+    },
+  ],
+  blusas: [
+    {
+      author: "Laura M.",
+      date: "hace 3 días",
+      rating: 5,
+      text: "Blusa suave y con muy buen caído. La uso tanto de día como de tarde.",
+    },
+    {
+      author: "Celia B.",
+      date: "hace 5 días",
+      rating: 4,
+      text: "La talla ajustó perfecto. El tejido es fresco y no transparenta.",
+    },
+    {
+      author: "Regla V.",
+      date: "hace 1 semana",
+      rating: 5,
+      text: "Llegó rápido y empacada con cuidado. Me queda ideal para la oficina.",
+    },
+    {
+      author: "Sandra C.",
+      date: "hace 2 semanas",
+      rating: 4,
+      text: "Buen acabado, botones firmes. Repetiré en otro color.",
+    },
+  ],
+  pantalones: [
+    {
+      author: "Tania G.",
+      date: "hace 2 días",
+      rating: 5,
+      text: "Ajuste perfecto al cuerpo sin apretar. Se nota la calidad de la tela.",
+    },
+    {
+      author: "Miriam H.",
+      date: "hace 6 días",
+      rating: 4,
+      text: "Cómodos todo el día. Me vinieron un pelín largos de bota.",
+    },
+    {
+      author: "Anabel L.",
+      date: "hace 1 semana",
+      rating: 5,
+      text: "El talle alto me encanta, estilizan muchísimo. Repetiría sin dudas.",
+    },
+    {
+      author: "Danay S.",
+      date: "hace 2 semanas",
+      rating: 4,
+      text: "Buen denim, resistente. La entrega fue rapidísima.",
+    },
+  ],
+  faldas: [
+    {
+      author: "Vivian T.",
+      date: "hace 3 días",
+      rating: 5,
+      text: "Combina con todo lo que tenía en el clóset. Muy bien confeccionada.",
+    },
+    {
+      author: "Clara N.",
+      date: "hace 5 días",
+      rating: 4,
+      text: "Lindo corte y buena caída. El plisado se mantiene perfecto.",
+    },
+    {
+      author: "Nuria R.",
+      date: "hace 1 semana",
+      rating: 5,
+      text: "Del trabajo a la cena sin cambiar de look. Tal cual lo esperaba.",
+    },
+    {
+      author: "América P.",
+      date: "hace 2 semanas",
+      rating: 4,
+      text: "Cintura cómoda y tela de calidad. Llega muy bien empacada.",
+    },
+  ],
+  accesorios: [
+    {
+      author: "Dayana F.",
+      date: "hace 2 días",
+      rating: 5,
+      text: "Se ve mucho más caro de lo que pagué. Terminación excelente.",
+    },
+    {
+      author: "Yenisei C.",
+      date: "hace 4 días",
+      rating: 4,
+      text: "Justo como en las fotos, bonito y sin detalles. Muy conforme.",
+    },
+    {
+      author: "Georgina A.",
+      date: "hace 1 semana",
+      rating: 5,
+      text: "El detalle perfecto para elevar cualquier outfit. Lo recomiendo.",
+    },
+    {
+      author: "Liset B.",
+      date: "hace 2 semanas",
+      rating: 4,
+      text: "Precioso y funcional. El envío llegó antes de lo previsto.",
+    },
+  ],
+}
+
+// Reseñas por defecto si faltara la categoría.
+export const REVIEW_SEEDS = REVIEWS_BY_CATEGORY.vestidos
 
 export const TAX_RATE = 0.1
 export const STORE_PHONE = "5355123456"
+
+// Variante tintada por color: <slug>-<hex>.jpg dentro de /images/colors.
+// colors[0] es el color base = imagen original del producto.
+export const COLOR_VARIANTS_DIR = "/images/colors"
+export const productImage = (product, colorHex) => {
+  const base = product.colors[0].hex
+  const hex = String(colorHex || base).toLowerCase()
+  if (hex === base.toLowerCase()) return product.image
+  if (!/^#?[0-9a-f]{6}$/.test(hex)) return product.image
+  return `${COLOR_VARIANTS_DIR}/${product.slug}-${hex.replace("#", "").toLowerCase()}.jpg`
+}
 
 export const getProductById = (id) => PRODUCTS.find((p) => p.id === id)
