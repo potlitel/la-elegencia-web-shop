@@ -33,7 +33,7 @@ export default function ProductDetailDialog({ product }) {
 
   return (
     <Dialog open onOpenChange={(open) => !open && setDetailProductId(null)}>
-      <DialogContent className="max-h-[92vh] max-w-md overflow-y-auto rounded-2xl border-0 p-0 shadow-2xl">
+      <DialogContent className="max-h-[92vh] max-w-lg overflow-y-auto rounded-2xl border-0 p-0 shadow-2xl">
         {/* Imagen inmersiva a ancho completo */}
         <div className="relative">
           <LazyImage
@@ -52,23 +52,6 @@ export default function ProductDetailDialog({ product }) {
               <Badge className="bg-red-500 text-white shadow-sm">-{discount}%</Badge>
             )}
           </div>
-
-          {/* Wishlist */}
-          <Button
-            size="icon"
-            variant="secondary"
-            onClick={(e) => {
-              e.stopPropagation()
-              toggleWishlist(product.id)
-              toast(wished ? "Quitado de deseos" : "Guardado en deseos")
-            }}
-            className={cn(
-              "absolute right-3 top-3 h-9 w-9 rounded-full bg-white/90 backdrop-blur shadow-sm",
-              wished && "text-red-500",
-            )}
-          >
-            <Heart size={16} className={cn(wished && "fill-current")} />
-          </Button>
 
           {/* Rating overlay en la imagen */}
           <div className="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 backdrop-blur-sm">
