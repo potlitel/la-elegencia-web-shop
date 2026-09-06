@@ -1,20 +1,18 @@
 """Genera variantes tintadas por color para cada producto.
 
-La paleta se lee en vivo de src/data/shop.js (sin duplicarla): Node vuelca
-{ slug -> [[nombre, hex], ...] } y se genera la variante <slug>-<hex>.jpg
-para cada color distinto del base (colors[0]). Los archivos que no
-correspondan a la paleta actual se eliminan.
+La paleta se lee de src/data/products.json: se genera la variante
+<slug>-<hex>.jpg para cada color distinto del base (colors[0]).
+Los archivos que no correspondan a la paleta actual se eliminan.
 
 Estrategia de tintado: en HSV se recompone el color con el matiz objetivo
 manteniendo la saturación/valor originales de los píxeles saturados (la tela),
 dejando casi intactos fondos neutros y pieles suaves.
 
-Requisitos: numpy y Pillow en el Python usado, y Node en el PATH.
+Requisitos: numpy y Pillow en el Python usado.
 Uso: python3 scripts/gen-color-variants.py
 """
 import colorsys
 import json
-import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -23,20 +21,13 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 SRC_DIR = ROOT / "public" / "images"
 OUT_DIR = ROOT / "public" / "images" / "colors"
-SHOP_JS = str(ROOT / "src" / "data" / "shop.js")
+PRODUCTS_JSON = str(ROOT / "src" / "data" / "products.json")
 
 
 def load_palette():
-    code = (
-        "import("
-        + json.dumps(SHOP_JS)
-        + ").then(m => console.log(JSON.stringify(m.PRODUCTS.map(p => ({"
-        "slug: p.slug,"
-        "colors: p.colors.map(c => ({ name: c.name, hex: c.hex }))"
-        "}))))).catch(e => { console.error(e); process.exit(1) })"
-    )
-    out = subprocess.run(["node", "-e", code], check=True, capture_output=True, text=True)
-    return json.loads(out.stdout)
+    with open(PRODUCTS_JSON, "r", encoding="utf-8") as f:
+        products = json.load(f)
+    return [{"slug": p["slug"], "colors": p["colors"]} for p in products]
 
 
 def hex_to_hsv(hexs):

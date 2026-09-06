@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { ChevronDown, Search, SlidersHorizontal, X } from "lucide-react"
+import { ChevronDown, ChevronLeft, ChevronRight, Search, SlidersHorizontal, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
@@ -9,6 +9,7 @@ import ProductDetailDialog from "./ProductDetailDialog.jsx"
 import { useStore } from "../core/StoreContext"
 
 const ALL_SIZES = ["XS", "S", "M", "L", "XL"]
+const ITEMS_PER_PAGE = 24
 const SORT_OPTIONS = [
   { id: "recomendados", label: "Recomendados" },
   { id: "precio-asc", label: "Precio: menor a mayor" },
@@ -17,7 +18,7 @@ const SORT_OPTIONS = [
   { id: "nuevos", label: "Más nuevos" },
 ]
 
-// SCREAMING ARCHITECTURE: CATALOG MODULE — listing with search, sort & filters
+// SCREAMING ARCHITECTURE: CATALOG MODULE — listing with search, sort & filters + pagination
 export default function CatalogSection() {
   const { detailProductId } = useStore()
   const [category, setCategory] = useState("all")
@@ -27,6 +28,7 @@ export default function CatalogSection() {
   const [priceMin, setPriceMin] = useState("")
   const [priceMax, setPriceMax] = useState("")
   const [filtersOpen, setFiltersOpen] = useState(false)
+  const [page, setPage] = useState(1)
 
   const products = useMemo(() => {
     let list = category === "all" ? [...PRODUCTS] : PRODUCTS.filter((p) => p.category === category)
@@ -68,6 +70,9 @@ export default function CatalogSection() {
     return list
   }, [category, query, sort, sizeFilter, priceMin, priceMax])
 
+  const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE)
+  const paginatedProducts = products.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
+
   const toggleSize = (s) =>
     setSizeFilter((prev) => (prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s]))
 
@@ -75,6 +80,22 @@ export default function CatalogSection() {
     setSizeFilter([])
     setPriceMin("")
     setPriceMax("")
+    setPage(1)
+  }
+
+  const handleCategoryChange = (id) => {
+    setCategory(id)
+    setPage(1)
+  }
+
+  const handleQueryChange = (e) => {
+    setQuery(e.target.value)
+    setPage(1)
+  }
+
+  const handleSortChange = (e) => {
+    setSort(e.target.value)
+    setPage(1)
   }
 
   return (
@@ -94,7 +115,7 @@ export default function CatalogSection() {
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-stone-400" />
           <Input
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={handleQueryChange}
             placeholder="Buscar vestido, blusa, bolso…"
             className="pl-9"
             aria-label="Buscar productos"
@@ -170,7 +191,7 @@ export default function CatalogSection() {
         {CATEGORIES.map((c) => (
           <button
             key={c.id}
-            onClick={() => setCategory(c.id)}
+            onClick={() => handleCategoryChange(c.id)}
             className={cn(
               "shrink-0 rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
               category === c.id
@@ -193,7 +214,7 @@ export default function CatalogSection() {
         <div className="relative">
           <select
             value={sort}
-            onChange={(e) => setSort(e.target.value)}
+            onChange={handleSortChange}
             aria-label="Ordenar productos"
             className="cursor-pointer appearance-none rounded-lg border border-stone-200 bg-white py-1.5 pr-8 pl-3 text-sm text-stone-600 focus:border-orange-500 focus:outline-none"
           >
@@ -217,11 +238,63 @@ export default function CatalogSection() {
           </Button>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
-          {products.map((p) => (
-            <ProductCard key={p.id} product={p} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+            {paginatedProducts.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
+          </div>
+
+          {/* Paginación */}
+          {totalPages > 1 && (
+            <div className="mt-8 flex items-center justify-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={page === 1}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              
+              {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                let pageNum
+                if (totalPages <= 5) {
+                  pageNum = i + 1
+                } else if (page <= 3) {
+                  pageNum = i + 1
+                } else if (page >= totalPages - 2) {
+                  pageNum = totalPages - 4 + i
+                } else {
+                  pageNum = page - 2 + i
+                }
+                return (
+                  <Button
+                    key={pageNum}
+                    variant={page === pageNum ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setPage(pageNum)}
+                    className={cn(
+                      "w-9",
+                      page === pageNum && "bg-stone-900 text-white"
+                    )}
+                  >
+                    {pageNum}
+                  </Button>
+                )
+              })}
+
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                disabled={page === totalPages}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
+        </>
       )}
 
       {detailProductId && (
