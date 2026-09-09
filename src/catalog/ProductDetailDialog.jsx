@@ -17,7 +17,7 @@ export default function ProductDetailDialog({ product }) {
   const { setDetailProductId, addToCart, toggleWishlist, wishlist } = useStore()
   const [size, setSize] = useState(product?.sizes[1] ?? product?.sizes[0] ?? "")
   const [color, setColor] = useState(product?.colors[0] ?? null)
-  const img = color ? productImage(product, color.hex) : ""
+  const img = color ? productImage(product) : ""
   const wished = wishlist.includes(product?.id)
 
   if (!product || !color) return null

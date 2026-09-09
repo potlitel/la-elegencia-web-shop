@@ -13,9 +13,9 @@ const { renderApp } = await import("../.ssr-test/ssr-entry.js")
 const html = renderApp()
 
 const required = [
-  "La Elegancia",
+  "Feria Paris-Vienan",
   "Encuentra tu prenda",
-  "Vestido Floral Primavera",
+  "Vestido Floral Campo",
   "Nueva colección 2026",
   "Recoge en tienda",
   "Transfermóvil",

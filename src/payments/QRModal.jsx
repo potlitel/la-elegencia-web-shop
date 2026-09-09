@@ -18,8 +18,8 @@ export default function QRModal() {
   const method = PAYMENT_METHODS[paymentMethod]
   const qrPayload =
     paymentMethod === "transfermovil"
-      ? `${STORE_PHONE}|${Math.round(totals.total)}|CUP|LaElegancia`
-      : `https://laelegancia.cu/pagar?monto=${Math.round(totals.total)}&moneda=CUP`
+      ? `${STORE_PHONE}|${Math.round(totals.total)}|CUP|FeriaParisVienan`
+      : `https://feriaparisvienan.cu/pagar?monto=${Math.round(totals.total)}&moneda=CUP`
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(
     qrPayload,
   )}&bgcolor=FFFFFF&color=1C1917&margin=12`

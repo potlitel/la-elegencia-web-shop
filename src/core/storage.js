@@ -1,6 +1,6 @@
 // SCREAMING ARCHITECTURE: PERSISTENCE MODULE
-const CART_KEY = "la_elegancia_cart_v2"
-const WISHLIST_KEY = "la_elegancia_wishlist_v2"
+const CART_KEY = "feria_paris_vienan_cart_v2"
+const WISHLIST_KEY = "feria_paris_vienan_wishlist_v2"
 
 export function loadCart() {
   try {

@@ -15,7 +15,7 @@ export default function Header() {
           </span>
           <span className="hidden flex-col leading-none sm:flex">
             <span className="font-serif text-lg font-bold tracking-tight text-stone-900">
-              La Elegancia
+              Feria Paris-Vienan
             </span>
             <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-stone-400">
               Moda femenina

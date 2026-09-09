@@ -10,7 +10,7 @@ const PERKS = [
   },
   {
     icon: Award,
-    title: "Club La Elegancia",
+    title: "Club Feria Paris-Vienan",
     text: "Clientas frecuentes con beneficios exclusivos.",
   },
   {
@@ -47,7 +47,7 @@ export default function Footer() {
               ◆
             </span>
             <div>
-              <p className="font-serif text-lg font-bold text-white">La Elegancia</p>
+              <p className="font-serif text-lg font-bold text-white">Feria Paris-Vienan</p>
               <p className="text-[10px] uppercase tracking-[0.25em] text-stone-500">
                 Moda femenina cubana
               </p>
@@ -72,10 +72,9 @@ export default function Footer() {
           <h3 className="mb-3 text-sm font-bold text-white">Categorías</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#catalog" className="transition-colors hover:text-orange-400">Vestidos</a></li>
-            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Blusas</a></li>
-            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Pantalones</a></li>
-            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Faldas</a></li>
-            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Accesorios</a></li>
+            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Tops</a></li>
+            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Gorros</a></li>
+            <li><a href="#catalog" className="transition-colors hover:text-orange-400">Sayas</a></li>
           </ul>
         </div>
 
@@ -103,7 +102,7 @@ export default function Footer() {
 
       <div className="border-t border-stone-800">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-stone-500 sm:flex-row sm:px-6 lg:px-8">
-          <p>© 2026 La Elegancia · Todos los derechos reservados</p>
+          <p>© 2026 Feria Paris-Vienan · Todos los derechos reservados</p>
           <p>Servicios de pago · Transfermóvil &amp; EnZona</p>
         </div>
       </div>

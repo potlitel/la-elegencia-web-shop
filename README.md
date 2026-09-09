@@ -1,17 +1,16 @@
-# ◆ La Elegancia
+# ◆ Feria Paris-Vienan
 
 Tienda online de **moda femenina cubana**. Frontend moderno con React 19 + Vite + Tailwind CSS v4 + shadcn/ui, pagos móviles cubanos (Transfermóvil y EnZona) y arquitectura Screaming Architecture.
 
 ## ✨ Características
 
-- **Catálogo** con 20 productos reales (vestidos, blusas, pantalones, faldas, accesorios), tallas XS–XL, colores y galería fotográfica local.
+- **Catálogo** con 22 productos reales (vestidos, tops, gorros, sayas), tallas XS–XL, colores y galería fotográfica local.
 - **Wish list** ("Mis deseos") sin registro, persistida en `localStorage`.
 - **Carrito** con cantidades, cupones de descuento, impuestos (10%) y total.
 - **Checkout en 1 paso**: nombre, teléfono y dirección.
 - **Pasarelas cubanas**: Transfermóvil y EnZona con **QR dinámico** (api.qrserver.com) por el monto exacto del pedido.
 - **Omnicanal**: sección "Recoge en tienda" con búsqueda por provincia y stock por tienda.
 - **Prueba social**: rating con estrellas, reseñas y contadores por producto.
-- **Cambio de color por variante**: al elegir un color, la foto de la prenda se recolorea en vivo.
 - **Rendimiento para redes lentas**: imágenes lazy-loading, assets locales, sin fuentes externas.
 - **Mobile First**: 320px → desktop, sin frameworks de CSS pesados.
 
@@ -20,8 +19,8 @@ Tienda online de **moda femenina cubana**. Frontend moderno con React 19 + Vite 
 | Código | Descuento |
 |--------|-----------|
 | `BIENVENIDA20` | 20 % |
-| `ELEGANCIA15` | 15 % |
-| `LAELEGANCIA10` | 10 % |
+| `FERIAPARIS15` | 15 % |
+| `FERIAVIENAN10` | 10 % |
 
 ## 🚀 Puesta en marcha
 

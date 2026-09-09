@@ -13,11 +13,11 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
   <circle cx="1050" cy="120" r="220" fill="#ff6b35" opacity="0.08"/>
   <circle cx="150" cy="520" r="260" fill="#f59e0b" opacity="0.05"/>
-  <text x="600" y="250" text-anchor="middle" font-family="Georgia, serif" font-size="66" font-weight="700" fill="#ffffff">◆ La Elegancia</text>
+  <text x="600" y="250" text-anchor="middle" font-family="Georgia, serif" font-size="66" font-weight="700" fill="#ffffff">◆ Feria Paris-Vienan</text>
   <text x="600" y="320" text-anchor="middle" font-family="system-ui" font-size="30" letter-spacing="6" fill="#a8a29e">MODA FEMENINA</text>
   <rect x="420" y="360" width="360" height="4" rx="2" fill="url(#brand)"/>
-  <text x="600" y="430" text-anchor="middle" font-family="system-ui" font-size="22" fill="#d6d3d1">Vestidos · Blusas · Pantalones · Faldas · Accesorios</text>
+  <text x="600" y="430" text-anchor="middle" font-family="system-ui" font-size="22" fill="#d6d3d1">Vestidos · Tops · Gorros · Sayas</text>
   <text x="600" y="520" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="600" fill="#ffffff">Paga con Transfermóvil y EnZona</text>
   <rect x="480" y="540" width="240" height="50" rx="25" fill="#ff6b35"/>
-  <text x="600" y="573" text-anchor="middle" font-family="system-ui" font-size="20" font-weight="700" fill="#ffffff">laelegancia.cu</text>
+  <text x="600" y="573" text-anchor="middle" font-family="system-ui" font-size="20" font-weight="700" fill="#ffffff">feriaparisvienan.cu</text>
 </svg>

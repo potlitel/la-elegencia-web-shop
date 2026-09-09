@@ -6,16 +6,15 @@ export const PRODUCTS = productsData
 export const CATEGORIES = [
   { id: "all", label: "Todo", icon: "✨" },
   { id: "vestidos", label: "Vestidos", icon: "👗" },
-  { id: "blusas", label: "Blusas", icon: "👚" },
-  { id: "pantalones", label: "Pantalones", icon: "👖" },
-  { id: "faldas", label: "Faldas", icon: "💃" },
-  { id: "accesorios", label: "Accesorios", icon: "👜" },
+  { id: "tops", label: "Tops", icon: "👚" },
+  { id: "gorros", label: "Gorros", icon: "🧢" },
+  { id: "sayas", label: "Sayas", icon: "💃" },
 ]
 
 export const STORES = [
   {
     id: 1,
-    name: "La Elegancia Centro Habana",
+    name: "Feria Paris-Vienan Centro Habana",
     address: "Obispo 256 e/ Mercaderes y San Ignacio",
     province: "La Habana",
     stock: 45,
@@ -23,7 +22,7 @@ export const STORES = [
   },
   {
     id: 2,
-    name: "La Elegancia Vedado",
+    name: "Feria Paris-Vienan Vedado",
     address: "Línea 812, esq. 2, Vedado",
     province: "La Habana",
     stock: 32,
@@ -31,7 +30,7 @@ export const STORES = [
   },
   {
     id: 3,
-    name: "La Elegancia Santa Clara",
+    name: "Feria Paris-Vienan Santa Clara",
     address: "Máximo Gómez 14, Santa Clara",
     province: "Villa Clara",
     stock: 28,
@@ -39,7 +38,7 @@ export const STORES = [
   },
   {
     id: 4,
-    name: "La Elegancia Santiago",
+    name: "Feria Paris-Vienan Santiago",
     address: "Agostino Neto 45, Santiago de Cuba",
     province: "Santiago de Cuba",
     stock: 19,
@@ -47,7 +46,7 @@ export const STORES = [
   },
   {
     id: 5,
-    name: "La Elegancia Camagüey",
+    name: "Feria Paris-Vienan Camagüey",
     address: "San José 302, Camagüey",
     province: "Camagüey",
     stock: 15,
@@ -55,7 +54,7 @@ export const STORES = [
   },
   {
     id: 6,
-    name: "La Elegancia Holguín",
+    name: "Feria Paris-Vienan Holguín",
     address: "García Lorca 78, Holguín",
     province: "Holguín",
     stock: 22,
@@ -63,7 +62,7 @@ export const STORES = [
   },
   {
     id: 7,
-    name: "La Elegancia Trinidad",
+    name: "Feria Paris-Vienan Trinidad",
     address: "Real del Jigüe 12, Trinidad",
     province: "Sancti Spíritus",
     stock: 11,
@@ -73,8 +72,8 @@ export const STORES = [
 
 export const COUPONS = {
   BIENVENIDA20: { percent: 20, code: "BIENVENIDA20" },
-  ELEGANCIA15: { percent: 15, code: "ELEGANCIA15" },
-  LAELEGANCIA10: { percent: 10, code: "LAELEGANCIA10" },
+  FERIAPARIS15: { percent: 15, code: "FERIAPARIS15" },
+  FERIAVIENAN10: { percent: 10, code: "FERIAVIENAN10" },
 }
 
 export const REVIEWS_BY_PRODUCT = reviewsData
@@ -82,15 +81,8 @@ export const REVIEWS_BY_PRODUCT = reviewsData
 export const TAX_RATE = 0.1
 export const STORE_PHONE = "5355123456"
 
-// Variante tintada por color: <slug>-<hex>.jpg dentro de /images/colors.
-// colors[0] es el color base = imagen original del producto.
-export const COLOR_VARIANTS_DIR = "/images/colors"
-export const productImage = (product, colorHex) => {
-  const base = product.colors[0].hex
-  const hex = String(colorHex || base).toLowerCase()
-  if (hex === base.toLowerCase()) return product.image
-  if (!/^#?[0-9a-f]{6}$/.test(hex)) return product.image
-  return `${COLOR_VARIANTS_DIR}/${product.slug}-${hex.replace("#", "").toLowerCase()}.jpg`
-}
+// Las fotos reales del catálogo no disponen de variantes de color tintadas.
+// Al seleccionar un color se mantiene siempre la fotografía original de la prenda.
+export const productImage = (product) => product.image
 
 export const getProductById = (id) => PRODUCTS.find((p) => p.id === id)

@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-40">
         <img
           src="/images/hero.jpg"
-          alt="Colección de moda femenina La Elegancia"
+          alt="Colección de moda femenina Feria Paris-Vienan"
           className="h-full w-full object-cover"
           loading="eager"
         />
@@ -32,7 +32,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 max-w-md text-base leading-relaxed text-stone-300">
-            Vestidos, blusas, pantalones y accesorios con calidad de exportación. Enviamos a toda la
+            Vestidos, tops, gorros y sayas con calidad de exportación. Enviamos a toda la
             isla o recoges en tu tienda más cercana.
           </p>
 

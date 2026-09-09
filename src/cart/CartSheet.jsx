@@ -24,7 +24,7 @@ function CartLine({ line }) {
   const { updateQty, removeFromCart } = useStore()
   const product = getProductById(line.productId)
   const img = product
-    ? productImage(product, line.colorHex)
+    ? productImage(product)
     : line.image
   return (
     <div className="flex gap-3 rounded-xl border border-stone-100 bg-white p-3">

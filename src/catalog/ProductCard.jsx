@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
   const { addToCart, toggleWishlist, wishlist, setDetailProductId } = useStore()
   const [size, setSize] = useState(product.sizes[1] ?? product.sizes[0])
   const [color, setColor] = useState(product.colors[0])
-  const img = productImage(product, color.hex)
+  const img = productImage(product)
   const wished = wishlist.includes(product.id)
   const discount = product.oldPrice
     ? Math.round((1 - product.price / product.oldPrice) * 100)
